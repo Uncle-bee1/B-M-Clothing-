@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B&M Clothing & Accessories - Wear Confidence. Own the Moment.</title>
-    ‎<img src="logo.png" alt="Logo" class="top-right-logo">
+    
     <style>
         * {
             margin: 0;
@@ -47,8 +47,7 @@
             color: white;
             text-decoration: none;
         }
-        
-        .nav-links {            display: flex;
+                .nav-links {            display: flex;
             gap: 2rem;
         }
         
@@ -97,8 +96,7 @@
             align-items: center;
             justify-content: center;
             font-size: 0.7rem;
-            font-weight: bold;        }
-        
+            font-weight: bold;        }        
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
@@ -147,8 +145,7 @@
             padding: 4rem 0;
         }
                 .section-title {
-            text-align: center;
-            font-size: 2.5rem;
+            text-align: center;            font-size: 2.5rem;
             margin-bottom: 3rem;
             color: #333;
         }
@@ -197,8 +194,7 @@
         
         .product-price {            font-size: 1.3rem;
             font-weight: bold;
-            color: #667eea;
-            margin-bottom: 1rem;
+            color: #667eea;            margin-bottom: 1rem;
         }
         
         .buy-now-btn {
@@ -247,8 +243,7 @@
             background: none;            border: none;
             font-size: 1.5rem;
             cursor: pointer;
-            color: #666;
-        }
+            color: #666;        }
         
         .cart-items {
             padding: 1.5rem;
@@ -297,8 +292,7 @@
             border-radius: 3px;
         }
         
-        .remove-item {
-            background: #ff4757;
+        .remove-item {            background: #ff4757;
             color: white;
             border: none;
             padding: 0.2rem 0.5rem;
@@ -347,8 +341,7 @@
         }
         
         .testimonial-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: grid;            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
         
@@ -397,8 +390,7 @@
             background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
             color: white;
         }
-        
-        /* Footer */
+                /* Footer */
         .footer {
             background: #333;
             color: white;
@@ -447,7 +439,9 @@
     <!-- Navigation -->
     <nav>
         <div class="container nav-content">
-            <a href="#" class="logo">B&M Clothing</a>
+            <div style="display: flex; align-items: center; gap: 10px;">                <img src="logo.png" alt="Logo" class="top-right-logo" style="height: 40px;">
+                <a href="#" class="logo">B&M Clothing</a>
+            </div>
             <div class="nav-links">
                 <a href="#home">Home</a>
                 <a href="#products">Products</a>
@@ -494,8 +488,7 @@
                     <p class="testimonial-text">"Amazing quality and fast delivery! The clothes fit perfectly and the material is top-notch."</p>
                     <p class="testimonial-author">- Sarah Johnson</p>
                 </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Best shopping experience ever! Customer service was excellent and the products exceeded my expectations."</p>
+                <div class="testimonial-card">                    <p class="testimonial-text">"Best shopping experience ever! Customer service was excellent and the products exceeded my expectations."</p>
                     <p class="testimonial-author">- Michael Chen</p>
                 </div>
                 <div class="testimonial-card">
@@ -544,8 +537,7 @@
             <div class="social-icons">
                 <a href="#" class="social-icon">📱</a>
                 <a href="#" class="social-icon">📘</a>
-                <a href="#" class="social-icon">📷</a>
-                <a href="#" class="social-icon">🐦</a>
+                <a href="#" class="social-icon">📷</a>                <a href="#" class="social-icon">🐦</a>
             </div>
         </div>
     </footer>
@@ -594,8 +586,7 @@
                 image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
             },
             {
-                id: 3,
-                name: "Elegant Evening Dress",
+                id: 3,                name: "Elegant Evening Dress",
                 description: "Beautiful formal dress for special occasions",
                 price: { NGN: 18000, USD: 11.16 },
                 image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
@@ -644,8 +635,7 @@
                         <p class="product-description">${product.description}</p>
                         <div class="product-price" id="price-${product.id}">₦${product.price.NGN.toLocaleString()}</div>
                         <button class="buy-now-btn" onclick="addToCart(${product.id})">Buy Now</button>
-                    </div>
-                `;
+                    </div>                `;
                 productsGrid.appendChild(productCard);
             });
         }
@@ -694,8 +684,7 @@
 
         // Remove from cart
         function removeFromCart(productId) {
-            cart = cart.filter(item => item.id !== productId);
-            updateCartDisplay();
+            cart = cart.filter(item => item.id !== productId);            updateCartDisplay();
         }
 
         // Update quantity
@@ -745,7 +734,6 @@
                 `;
                 cartItems.appendChild(cartItem);
             });
-
             // Update total
             cartTotal.textContent = formatCurrency(total, currentCurrency);
         }
@@ -794,8 +782,7 @@
             
             // Remove after 3 seconds
             setTimeout(() => {
-                document.body.removeChild(notification);
-            }, 3000);
+                document.body.removeChild(notification);            }, 3000);
         }
 
         // Initialize the application
